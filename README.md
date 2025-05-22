@@ -13,7 +13,6 @@ This project implements the classic trick-taking card game Euchre in Python, sup
 - Custom Rule Enforcement and State Transitions: Implementation of non-trivial game rules such as trump mechanics, trick evaluation, and scoring logic using clean control structures and class methods.
 - Strategy Pattern with Polymorphism: Different player behaviors (human vs. AI) are abstracted using polymorphic classes, making it easy to test or swap in new player strategies.
 - State Machine Logic: The game engine uses discrete, ordered phases (deal, bidding, playing, scoring) to manage turn-based progression and enforce valid state transitions.
-- 
 
 ## ⚡ Terpiez App
 **Description**:  
