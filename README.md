@@ -4,71 +4,112 @@ Welcome to my portfolio of computer science projects! This repository contains w
 
 ---
 
+## 🔌 Euchre Game
+**Description**:  
+This project implements the classic trick-taking card game Euchre in Python, supporting both human and AI players. The program structures the game into distinct components, including player strategies, card objects, game flow logic, trick resolution, and scoring. The AI players use simple decision heuristics to play cards based on their hands and the current trump suit. The game enforces all Euchre-specific rules, such as team play, trump suit logic, left and right bowers, and trick-taking rules. Additionally, the program includes error handling for illegal moves, string-to-object conversions, and complex round logic.
+
+**Key Concepts**:  
+- Object-Oriented Design Patterns: Extensive use of class hierarchies for players, cards, and game state to support modular design, encapsulation, and reuse (e.g., Player, SimplePlayer, Card, Pack, Game).
+- Custom Rule Enforcement and State Transitions: Implementation of non-trivial game rules such as trump mechanics, trick evaluation, and scoring logic using clean control structures and class methods.
+- Strategy Pattern with Polymorphism: Different player behaviors (human vs. AI) are abstracted using polymorphic classes, making it easy to test or swap in new player strategies.
+- State Machine Logic: The game engine uses discrete, ordered phases (deal, bidding, playing, scoring) to manage turn-based progression and enforce valid state transitions.
+- 
+
+## ⚡ Terpiez App
+**Description**:  
+This project is a full-stack Flutter-based augmented reality (AR) game app named Terpiez, where users explore real-world locations to capture creatures. The app includes features like map integration, background location tracking, Redis-based remote data synchronization, local and push notifications, sensor interaction (e.g., accelerometer), and persistent creature data storage. The design also supports gamified elements like stats tracking and personalized creature logs. The app supports background services and secure storage, making it suitable for always-on mobile gaming.
+
+**Key Concepts**:  
+- Flutter UI & State Management: Use of widgets, Provider, and global state keys to manage complex UI updates and user interactions across multiple screens (e.g., maps, stats, capture).
+- Asynchronous Background Services & Location Tracking: Integration with flutter_background_service, Geolocator, and Redis for continuous data syncing and geo-based triggers even when the app is not in the foreground.
+- Secure Persistent Storage & Notifications: Secure data handling using flutter_secure_storage and real-time alerts via flutter_local_notifications, allowing personalized and time-sensitive gameplay experiences.
+- Redis Database Communication: Asynchronous read/write operations to Redis allow fast syncing of player data and creature states across devices.
+- Custom UI/UX with Flutter Animations: Animated creature cards, transitions, and themed map interactions enhance engagement and provide visual feedback.
+
+## 🔧 ShareBear App
+**Description**:  
+Share Bear is a collaborative Flutter application designed to facilitate peer-to-peer task management, idea sharing, and team collaboration through a streamlined mobile interface. It enables users to create, edit, and post “shares” — task cards or updates — that include titles, tags, and descriptions. Each share is stored in Firestore, enabling real-time updates across all devices. The app supports dynamic user interfaces, tag-based filtering, and asynchronous database operations. It also includes UI components like sliding pages, reusable widgets, and an interactive app bar to ensure a clean, engaging user experience. The focus of the app is creating a supportive and interactive digital community where users can contribute ideas, view others’ contributions, and engage in shared productivity goals — all in real-time.
+
+**Key Concepts**:  
+- Cloud Firestore Integration for Real-Time Collaboration: The app connects to Firebase's Firestore database to store and retrieve shared items. It supports real-time updates, asynchronous reads/writes, and seamless integration between front-end UI and cloud storage.
+- Component-Based UI Design in Flutter: The UI is structured around reusable Flutter widgets, making it easy to display posts (shares), create dynamic forms, and maintain separation of concerns between layout and logic. Screens are modularized for different use cases like posting, browsing, and onboarding.
+- Asynchronous State Management & Navigation Flow: Implements Dart’s async/await patterns to handle Firestore operations and user interactions smoothly. The app features robust routing between onboarding, home, and sharing screens, ensuring a fluid multi-page navigation experience.
+
 ## 📂 Java Projects
 
 ### Basic Linked List
 **Description**:  
+A generic singly linked list implementation in Java that supports standard list operations including insertion, deletion, and iteration without using Java's built-in collection classes.
 
 **Key Concepts**:  
-- Object-Oriented Programming  
-- Exception Handling  
-- File I/O
+- Custom Generic Data Structures
+- Manual Node Pointer Manipulation
+- Iterable Interface Implementation
 
 ### Blackjack
 **Description**:  
+A modular simulation of the Blackjack card game featuring game logic, outcome evaluation, and hand analysis. The program separates gameplay mechanics from scoring logic, and supports variable rule sets.
 
 **Key Concepts**:  
-- Object-Oriented Programming  
-- Exception Handling  
-- File I/O
+- Encapsulation of Game Logic
+- Enumeration and Control Flow for Game States
+- Modular Scoring and Rule Evaluation
   
 ### Cell Game
 **Description**:  
+A grid-based falling block puzzle game that clears cells based on color matches. The program models board state, cascading updates, and cell gravity.
 
 **Key Concepts**:  
-- Object-Oriented Programming  
-- Exception Handling  
-- File I/O
+- 2D Array Grid Modeling
+- Recursive/Iterative Cell Collapse Logic
+- Game State Simulation and Update Cycles
 
 ### Graph Maze
 **Description**:  
+A recursive depth-first search maze solver that finds all valid paths from start to finish in a character matrix. It visually marks successful and failed paths.
 
 **Key Concepts**:  
-- Object-Oriented Programming  
-- Exception Handling  
-- File I/O
+- Recursive Backtracking
+- Grid Traversal and Pathfinding
+- State Preservation for Undo/Redo Logic
 
 ### Hash Set
 **Description**:  
+A simplified hash set implementation that supports dynamic resizing and efficient set operations such as add, remove, and contains.
 
 **Key Concepts**:  
-- Object-Oriented Programming  
-- Exception Handling  
-- File I/O
+- Hashing and Collision Resolution
+- Dynamic Array Resizing
+- Set Membership and Load Factor Management
 
 ### Heavy Bag
 **Description**:  
+An implementation of a multiset data structure ("bag") that tracks item frequency, allowing duplicates and frequency-based queries.
 
 **Key Concepts**:  
-- Object-Oriented Programming  
-- Exception Handling  
-- File I/O
+- Frequency Counting via Internal Maps
+- Iterator with Repetition Awareness
+- Generic Collection Behavior with Duplicate Handling
 
 ### Minimum Snippet
 **Description**:  
+An algorithm to find the smallest substring (snippet) in a document that contains all query words, useful for search engines or document highlighting.
 
 **Key Concepts**:  
-- Object-Oriented Programming  
-- Exception Handling  
-- File I/O
+- Sliding Window Algorithm
+- Token Position Indexing
+- Greedy Substring Optimization
 
 ### Polymorphic Tree
 **Description**:  
+A Java implementation of a polymorphic binary search tree that maps keys to values without relying on null pointers. The design leverages polymorphism to eliminate conditional logic typically required for empty tree cases. The system consists of Tree<K, V> as an interface, with EmptyTree and NonEmptyTree as concrete implementations. The tree supports insertion, deletion, lookup, and subtree operations, and gracefully handles operations on empty trees via object-oriented exception handling.
 
 **Key Concepts**:  
-- Object-Oriented Programming  
-- Exception Handling  
-- File I/O
+- Polymorphism over Conditional Logic
+- Recursive Tree Structure with No Nulls
+- Interface-Based Design with Implementation Inversion
+- Exception Handling for Invalid Tree States
+- Comparable Key-Based Binary Search Traversal
   
 ## 📊 C Projects
 
@@ -163,63 +204,22 @@ A command-line interface for interacting with a structured document editor. The 
 - Input Sanitization and Validation
   
 ## 🧠 AVR Assembly Projects
-
-### Assembly Basics
 **Description**:  
+This collection of AVR assembly projects demonstrates basic low-level programming by re-implementing common mathematical and utility functions typically written in C. The code interfaces directly with microcontroller registers and adheres to calling conventions and stack management protocols to simulate recursion and control flow. Projects include:
 
-**Key Concepts**:  
-- Object-Oriented Programming  
-- Exception Handling  
-- File I/O
+Recursive Fibonacci Calculation using stack frames and register preservation
+Integer Square Root calculation via bit-shifting (recursive version based on Wikipedia’s algorithm)
+A multi-function exercise suite that implements Max, Strlen, and a constant return function Five
 
-### Fibonacci
-**Description**:  
+Each function is tested with dedicated AVR-compatible C drivers and linked into simulated embedded environments. The work demonstrates precise register-level control, performance optimization, and system-level integration for constrained environments.
 
-**Key Concepts**:  
-- Object-Oriented Programming  
-- Exception Handling  
-- File I/O
-
-### Isqrt
-**Description**:  
-
-**Key Concepts**:  
-- Object-Oriented Programming  
-- Exception Handling  
-- File I/O
+**Key Concepts:**
+- Recursive Function Implementation in Assembly (e.g., fib(n) via stack and register manipulation)
+- Register-Level Arithmetic & Bitwise Operations (e.g., bit shifts for isqrt, multiply with mul)
+- Calling Convention Adherence & Stack Frame Management (push/pop, argument preservation across calls)
+- Looping and Conditional Branching Without High-Level Constructs (e.g., brsh, breq, jmp)
+- Direct Memory Access and Pointer Arithmetic (e.g., Strlen using X+ post-increment and register pairs)
   
-## 🔌 Euchre Game
-**Description**:  
-This project implements the classic trick-taking card game Euchre in Python, supporting both human and AI players. The program structures the game into distinct components, including player strategies, card objects, game flow logic, trick resolution, and scoring. The AI players use simple decision heuristics to play cards based on their hands and the current trump suit. The game enforces all Euchre-specific rules, such as team play, trump suit logic, left and right bowers, and trick-taking rules. Additionally, the program includes error handling for illegal moves, string-to-object conversions, and complex round logic.
-
-**Key Concepts**:  
-- Object-Oriented Design Patterns: Extensive use of class hierarchies for players, cards, and game state to support modular design, encapsulation, and reuse (e.g., Player, SimplePlayer, Card, Pack, Game).
-- Custom Rule Enforcement and State Transitions: Implementation of non-trivial game rules such as trump mechanics, trick evaluation, and scoring logic using clean control structures and class methods.
-- Strategy Pattern with Polymorphism: Different player behaviors (human vs. AI) are abstracted using polymorphic classes, making it easy to test or swap in new player strategies.
-- State Machine Logic: The game engine uses discrete, ordered phases (deal, bidding, playing, scoring) to manage turn-based progression and enforce valid state transitions.
-- 
-
-## ⚡ Terpiez App
-**Description**:  
-This project is a full-stack Flutter-based augmented reality (AR) game app named Terpiez, where users explore real-world locations to capture creatures. The app includes features like map integration, background location tracking, Redis-based remote data synchronization, local and push notifications, sensor interaction (e.g., accelerometer), and persistent creature data storage. The design also supports gamified elements like stats tracking and personalized creature logs. The app supports background services and secure storage, making it suitable for always-on mobile gaming.
-
-**Key Concepts**:  
-- Flutter UI & State Management: Use of widgets, Provider, and global state keys to manage complex UI updates and user interactions across multiple screens (e.g., maps, stats, capture).
-- Asynchronous Background Services & Location Tracking: Integration with flutter_background_service, Geolocator, and Redis for continuous data syncing and geo-based triggers even when the app is not in the foreground.
-- Secure Persistent Storage & Notifications: Secure data handling using flutter_secure_storage and real-time alerts via flutter_local_notifications, allowing personalized and time-sensitive gameplay experiences.
-- Redis Database Communication: Asynchronous read/write operations to Redis allow fast syncing of player data and creature states across devices.
-- Custom UI/UX with Flutter Animations: Animated creature cards, transitions, and themed map interactions enhance engagement and provide visual feedback.
-
-## 🔧 ShareBear App
-**Description**:  
-Share Bear is a collaborative Flutter application designed to facilitate peer-to-peer task management, idea sharing, and team collaboration through a streamlined mobile interface. It enables users to create, edit, and post “shares” — task cards or updates — that include titles, tags, and descriptions. Each share is stored in Firestore, enabling real-time updates across all devices. The app supports dynamic user interfaces, tag-based filtering, and asynchronous database operations. It also includes UI components like sliding pages, reusable widgets, and an interactive app bar to ensure a clean, engaging user experience. The focus of the app is creating a supportive and interactive digital community where users can contribute ideas, view others’ contributions, and engage in shared productivity goals — all in real-time.
-
-**Key Concepts**:  
-- Cloud Firestore Integration for Real-Time Collaboration: The app connects to Firebase's Firestore database to store and retrieve shared items. It supports real-time updates, asynchronous reads/writes, and seamless integration between front-end UI and cloud storage.
-- Component-Based UI Design in Flutter: The UI is structured around reusable Flutter widgets, making it easy to display posts (shares), create dynamic forms, and maintain separation of concerns between layout and logic. Screens are modularized for different use cases like posting, browsing, and onboarding.
-- Asynchronous State Management & Navigation Flow: Implements Dart’s async/await patterns to handle Firestore operations and user interactions smoothly. The app features robust routing between onboarding, home, and sharing screens, ensuring a fluid multi-page navigation experience.
-
-
 ## 📬 Contact
 Feel free to reach out if you have questions or want to see the actual project repositories:
 
