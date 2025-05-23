@@ -16,7 +16,7 @@ This project implements the classic trick-taking card game Euchre in Python, sup
 
 ## ⚡ Terpiez App
 **Description**:  
-This project is a full-stack Flutter-based augmented reality (AR) game app named Terpiez, where users explore real-world locations to capture creatures. The app includes features like map integration, background location tracking, Redis-based remote data synchronization, local and push notifications, sensor interaction (e.g., accelerometer), and persistent creature data storage. The design also supports gamified elements like stats tracking and personalized creature logs. The app supports background services and secure storage, making it suitable for always-on mobile gaming.
+This project is a full-stack Flutter-based game app named Terpiez, where users explore real-world locations to capture creatures. The app includes features like map integration, background location tracking, Redis-based remote data synchronization, local and push notifications, sensor interaction (e.g., accelerometer), and persistent creature data storage. The design also supports gamified elements like stats tracking and personalized creature logs. The app supports background services and secure storage, making it suitable for always-on mobile gaming.
 
 **Key Concepts**:  
 - Flutter UI & State Management: Use of widgets, Provider, and global state keys to manage complex UI updates and user interactions across multiple screens (e.g., maps, stats, capture).
@@ -220,7 +220,7 @@ Each function is tested with dedicated AVR-compatible C drivers and linked into 
 - Direct Memory Access and Pointer Arithmetic (e.g., Strlen using X+ post-increment and register pairs)
   
 ## 📬 Contact
-Feel free to reach out if you have questions or want to see the actual project repositories:
+Feel free to reach out if you have questions or would like to see the actual project repositories:
 
 📧 Email: pradham726@gmail.com
 💼 LinkedIn: linkedin.com/in/pradham-rodda
